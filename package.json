@@ -1,0 +1,34 @@
+{
+  "name": "saury",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx --fix",
+  "format": "prettier --write \"./**/*.{html,vue,ts,js,json,md}\"",
+  "dev": "pnpm -C play dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+  "eslint": "^8.34.0",
+  "husky": "^8.0.3",
+  "lint-staged": "^13.1.2",
+  "prettier": "^2.8.4",
+  "stylelint": "15.0.0",
+  "typescript": "^4.9.5",
+  "vue": "^3.2.36"
+  },
+  "dependencies": {
+  "@saury/components": "workspace:^1.0.0",
+  "@saury/saury-eslint-config": "workspace:^1.0.0",
+  "@saury/saury-stylelint-config": "workspace:^1.0.0",
+  "@saury/theme-chalk": "workspace:^1.0.0",
+  "@saury/utils": "workspace:^1.0.0"
+  },
+  "lint-staged": {
+  "*.{vue,js,ts,jsx,tsx,md,json}": "eslint --fix"
+  }
+}

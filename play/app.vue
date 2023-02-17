@@ -1,0 +1,3 @@
+<template>
+ <sy-button />
+</template>

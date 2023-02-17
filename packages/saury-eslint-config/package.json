@@ -1,0 +1,24 @@
+{
+  "name": "@saury/saury-eslint-config",
+  "version": "1.0.0",
+  "description": "eslint config of saury",
+  "main": "index.js",
+  "scripts": {
+  "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+  "eslint",
+  "tslint",
+  "config"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+  "@typescript-eslint/eslint-plugin": "^4.6.0",
+  "@typescript-eslint/parser": "^4.6.0",
+  "eslint-config-airbnb-base": "^14.2.0",
+  "eslint-config-prettier": "^6.15.0",
+  "eslint-plugin-import": "^2.22.1",
+  "eslint-plugin-vue": "^9.7.0"
+  }
+}
