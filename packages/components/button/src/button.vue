@@ -16,7 +16,7 @@ export default defineComponent({
 })
 </script>
 
-<style>
+<style lang="less">
 .a {
   width: 10px;
   color: red;
