@@ -42,6 +42,6 @@
       "eslint --fix",
       "prettier --write"
     ],
-    "*.{css,less,vue,html}": ["stylelint --fix"]
+    "*.{css,less,vue,html}": ["stylelint --fix", "git add ."]
   }
 }
