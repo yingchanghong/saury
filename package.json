@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx",
     "lint:fix": "eslint . --ext .vue,.js,.ts,.jsx,.tsx --fix",
-    "stylelint": "stylelint \"./**/*.{css,less,vue,html}\" --fix",
+    "stylelint": "stylelint \"./**/*.{css,less,vue,html}\"",
+    "stylelint:fix": "stylelint \"./**/*.{css,less,vue,html}\" --fix",
     "format": "prettier --write \"./**/*.{html,vue,ts,js,json,md}\"",
     "dev": "pnpm -C play dev"
   },
@@ -24,6 +25,8 @@
     "vue": "^3.2.36"
   },
   "dependencies": {
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-conventional": "^17.4.4",
     "@saury/components": "workspace:^1.0.0",
     "@saury/saury-eslint-config": "workspace:^1.0.0",
     "@saury/saury-stylelint-config": "workspace:^1.0.0",
@@ -43,7 +46,7 @@
     "*.{vue,js,ts,jsx,tsx,md,json}": [
       "eslint --fix",
       "prettier --write",
-      "stylelint \"./**/*.{css,less,vue,html}\""
+      "stylelint \"./**/*.{css,less,vue,html}\" --fix"
     ]
   }
 }
