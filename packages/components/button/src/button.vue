@@ -10,6 +10,7 @@ export default defineComponent({
   name: 'SyButton',
   props: buttonProps,
   setup(props) {
+    var d = 21;
     const a = 12
     console.log(1)
   },
