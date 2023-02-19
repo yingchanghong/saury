@@ -38,7 +38,7 @@
     "postcss-html": "^1.5.0"
   },
   "lint-staged": {
-    "*.{vue,js,ts,jsx,tsx,md,json}": [
+    "packages/*.{vue,js,ts,jsx,tsx,json}": [
       "eslint --fix",
       "prettier --write"
     ],
