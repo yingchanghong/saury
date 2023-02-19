@@ -4,15 +4,22 @@
   "description": "stylelint config of saury",
   "main": "index.js",
   "scripts": {
-  "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-  "stylelint"
+    "stylelint"
   ],
   "author": "",
   "license": "ISC",
   "dependencies": {
-  "stylelint-config-prettier": "^9.0.5",
-  "stylelint-config-standard": "^30.0.1"
+    "postcss": "^8.4.21",
+    "postcss-html": "^1.5.0",
+    "postcss-less": "^6.0.0",
+    "stylelint": "14.12.1",
+    "stylelint-config-prettier": "^9.0.5",
+    "stylelint-config-recommended-less": "^1.0.4",
+    "stylelint-config-standard": "^30.0.1",
+    "stylelint-config-standard-vue": "^1.0.0",
+    "stylelint-order": "^6.0.2"
   }
 }

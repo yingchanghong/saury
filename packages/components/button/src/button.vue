@@ -9,9 +9,15 @@ export default defineComponent({
   name: 'SyButton',
   props: buttonProps,
   setup(props) {
-    console.log(1)
+    const a = 1
+    console.log(a)
   },
 })
 </script>
 
-<style></style>
+<style lang="less">
+.a {
+  width: 10px;
+  color: red;
+}
+</style>
