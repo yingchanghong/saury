@@ -10,13 +10,13 @@ export default defineComponent({
   name: 'SyButton',
   props: buttonProps,
   setup(props) {
-    const a = 12
-    console.log(1)
+    const a = 1
+    console.log(a)
   },
 })
 </script>
 
-<style>
+<style lang="less">
 .a {
   width: 10px;
   color: red;
