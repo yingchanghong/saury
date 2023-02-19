@@ -1,4 +1,4 @@
 module.exports = {
   root: true,
-  extends: ["@element-plus/eslint-config"]
+  extends: ["@saury/saury-eslint-config"]
 }
