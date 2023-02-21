@@ -1,4 +1,4 @@
 module.exports = {
   root: true,
-  extends: ["@saury/saury-eslint-config"]
+  extends: ['@saury/saury-eslint-config'],
 }

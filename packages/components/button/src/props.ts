@@ -1,8 +1,20 @@
 import type { ExtractPropTypes } from 'vue'
 
+type ButtonType = 'primary' | 'success ' | 'warning ' | 'danger' | 'info' | 'text'
+
+type ButtonSize = 'medium' | 'small ' | 'mini'
+
+const buttonType = ['primary', 'success ', 'warning ', 'danger', 'info', 'text']
+const buttonSize = ['medium', 'small ', 'mini']
+
 export const buttonProps = {
   disabled: {
     type: Boolean,
+    default: false,
+  },
+  round: {
+    type: Boolean,
+    default: false,
   },
   icon: {
     type: String,
@@ -11,18 +23,21 @@ export const buttonProps = {
     type: Function,
   },
   type: {
-    type: String, // primary | ghost | link | dashed
+    type: String,
     default: 'default',
+    validator: (value) => buttonType.includes(value),
   },
   loading: {
     type: Boolean,
+    default: false,
   },
   color: {
     type: String,
   },
   size: {
-    type: String, // 'laege'|'default'|'small'
-    default: 'default',
+    type: String,
+    default: 'medium',
+    validator: (value) => buttonSize.includes(value),
   },
 } as const
 
