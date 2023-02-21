@@ -10,7 +10,7 @@ const nameSplice = (nameSpace, block, b?: string, e?: string, m?: string) => {
 }
 
 export const useNameSpace = (compentName: string) => {
-  let cmName = compentName
+  const cmName = compentName
 
   const b = (name = '') => nameSplice(defaultNamespace, cmName, name)
   const e = (element?: string) => {}
@@ -19,9 +19,7 @@ export const useNameSpace = (compentName: string) => {
   const em = () => {}
   const bm = () => {}
   const bem = () => {}
-  const is = (name: string, status: boolean = true) => {
-    return name && status ? `${statePrefix}${name}` : ''
-  }
+  const is = (name: string, status = true) => (name && status ? `${statePrefix}${name}` : '')
   return {
     b,
     e,

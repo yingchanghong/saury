@@ -8,6 +8,7 @@
 import { defineComponent } from 'vue'
 import { buttonProps } from './props'
 import { useNameSpace } from '@saury/utils'
+
 export default defineComponent({
   name: 'SyButton',
   props: buttonProps,
@@ -22,5 +23,5 @@ export default defineComponent({
 </script>
 
 <style lang="less">
-@import './index.less';
+@import url('./index.less');
 </style>
