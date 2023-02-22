@@ -1,5 +1,5 @@
 <template>
-  <button :class="[ns.b(''), ns.m(type)]">
+  <button onclick="handleClick" :class="[ns.b(), ns.m(type)]">
     <span><slot /></span>
   </button>
 </template>
@@ -13,11 +13,15 @@ export default defineComponent({
   name: 'SyButton',
   props: buttonProps,
   setup(props) {
-    const { type } = props
+    const { type, onClick } = props
     const ns = useNameSpace('btn')
-    const a = 1
-    console.log(props.type)
-    return { type, ns }
+    const emitEvent = (fn, e) => {
+      fn(e)
+    }
+    const handleClick = (event: MouseEvent) => {
+      emitEvent(onClick, event)
+    }
+    return { type, ns, handleClick }
   },
 })
 </script>
