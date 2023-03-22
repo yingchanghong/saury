@@ -3,6 +3,7 @@ import demoblock from 'vitepress-theme-demoblock'
 
 export default {
   title: "sauryUI",
+  base: "/saury/",
   description: "vue3 ui",
   themeConfig: {
     logo: "/logo/svg",
