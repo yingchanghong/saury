@@ -8,7 +8,7 @@ export default defineConfig({
     emptyOutDir: false,
     lib: {
       entry: resolve(__dirname, 'index.ts'),
-      name: 'saury',
+      name: '@saury/components',
     },
     rollupOptions: {
       external: ['vue'],

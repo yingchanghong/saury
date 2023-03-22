@@ -5,8 +5,8 @@
   "exports": {
     ".": {
       "types": "./dist/components/index.d.ts",
-      "require": "./dist/components.umd.cjs",
-      "import": "./dist/components.js"
+      "require": "./dist/components.umd.js",
+      "import": "./dist/components.mjs"
     },
     "./dist/style.css": "./dist/style.css"
   },
