@@ -10,7 +10,8 @@
     "stylelint": "stylelint \"./**/*.{css,less,vue,html}\"",
     "stylelint:fix": "stylelint \"./**/*.{css,less,vue,html}\" --fix",
     "format": "prettier --write \"./**/*.{html,vue,ts,js,json,md}\"",
-    "dev": "pnpm -C play dev"
+    "dev": "pnpm -C play dev",
+    "docs:build": "npm -C docs run build"
   },
   "keywords": [],
   "author": "",

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "docs:dev": "vitepress dev --port 9999 --open --host",
-    "docs:build": "vitepress build docs",
+    "build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"
   },
   "keywords": [],
