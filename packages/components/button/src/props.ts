@@ -1,11 +1,11 @@
 import type { ExtractPropTypes } from 'vue'
 
-type ButtonType = 'primary' | 'success ' | 'warning ' | 'danger' | 'info' | 'text'
+type ButtonType = 'primary' | 'success' | 'warning' | 'error' | 'info' | 'text' | 'default'
 
-type ButtonSize = 'medium' | 'small ' | 'mini'
+type ButtonSize = 'large' | 'small ' | 'default'
 
-const buttonType = ['primary', 'success ', 'warning ', 'danger', 'info', 'text']
-const buttonSize = ['medium', 'small ', 'mini']
+const buttonType = ['primary', 'success', 'warning', 'error', 'info', 'text', 'default']
+const buttonSize = ['large', 'small ', 'default']
 
 export const buttonProps = {
   disabled: {
@@ -25,7 +25,7 @@ export const buttonProps = {
   type: {
     type: String,
     default: 'default',
-    validator: (value) => buttonType.includes(value),
+    validator: (value: ButtonType) => buttonType.includes(value),
   },
   loading: {
     type: Boolean,
@@ -36,8 +36,12 @@ export const buttonProps = {
   },
   size: {
     type: String,
-    default: 'medium',
-    validator: (value) => buttonSize.includes(value),
+    default: 'default',
+    validator: (value: ButtonSize) => buttonSize.includes(value),
+  },
+  text: {
+    type: Boolean,
+    default: false,
   },
 } as const
 

@@ -1,5 +1,5 @@
-import { defineComponent as d, openBlock as m, createElementBlock as f, normalizeClass as y, createElementVNode as b, renderSlot as _ } from "vue";
-const $ = ["primary", "success ", "warning ", "danger", "info", "text"], S = ["medium", "small ", "mini"], g = {
+import { defineComponent as y, computed as $, openBlock as k, createElementBlock as S, normalizeClass as B, createElementVNode as C, renderSlot as g } from "vue";
+const v = ["primary", "success", "warning", "error", "info", "text", "default"], h = ["large", "small ", "default"], N = {
   disabled: {
     type: Boolean,
     default: !1
@@ -17,7 +17,7 @@ const $ = ["primary", "success ", "warning ", "danger", "info", "text"], S = ["m
   type: {
     type: String,
     default: "default",
-    validator: (t) => $.includes(t)
+    validator: (e) => v.includes(e)
   },
   loading: {
     type: Boolean,
@@ -28,19 +28,23 @@ const $ = ["primary", "success ", "warning ", "danger", "info", "text"], S = ["m
   },
   size: {
     type: String,
-    default: "medium",
-    validator: (t) => S.includes(t)
+    default: "default",
+    validator: (e) => h.includes(e)
+  },
+  text: {
+    type: Boolean,
+    default: !1
   }
-}, i = "sy", k = "is-", u = (t, e, n, o, s) => {
-  let l = `${t}-${e}`;
-  return n && (l += `-${n}`), o && (l += `__${o}`), s && (l += `--${s}`), l;
-}, B = (t) => {
-  const e = t;
+}, p = "sy", z = "is-", f = (e, t, n, s, l) => {
+  let a = `${e}-${t}`;
+  return n && (a += `-${n}`), s && (a += `__${s}`), l && (a += `--${l}`), a;
+}, m = (e) => {
+  const t = e;
   return {
-    b: (c = "") => u(i, e, c),
-    e: (c) => {
+    b: (o = "") => f(p, t, o),
+    e: (o) => {
     },
-    m: (c) => c ? u(i, e, "", "", c) : "",
+    m: (o) => o ? f(p, t, "", "", o) : "",
     be: () => {
     },
     em: () => {
@@ -49,39 +53,39 @@ const $ = ["primary", "success ", "warning ", "danger", "info", "text"], S = ["m
     },
     bem: () => {
     },
-    is: (c, p = !0) => c && p ? `${k}${c}` : ""
+    is: (o, r = !0) => o && r ? `${z}${o}` : ""
   };
-}, v = d({
+}, E = y({
   name: "SyButton",
-  props: g,
-  setup(t) {
-    const { type: e, onClick: n } = t, o = B("btn"), s = (a, r) => {
-      a(r);
-    };
-    return { type: e, ns: o, handleClick: (a) => {
-      s(n, a);
-    } };
+  props: N,
+  setup(e) {
+    const { type: t, onClick: n, round: s, disabled: l, text: a } = e, i = m("btn"), c = m("round"), d = (r, b) => {
+      r(b);
+    }, u = $(() => t === "text" || a);
+    return { type: t, ns: i, handleClick: (r) => {
+      n && d(n, r);
+    }, is: c, round: s, disabled: l, isText: u };
   }
-});
-const C = (t, e) => {
-  const n = t.__vccOpts || t;
-  for (const [o, s] of e)
-    n[o] = s;
+}), T = (e, t) => {
+  const n = e.__vccOpts || e;
+  for (const [s, l] of t)
+    n[s] = l;
   return n;
-};
-function h(t, e, n, o, s, l) {
-  return m(), f("button", {
-    onclick: "handleClick",
-    class: y([t.ns.b(), t.ns.m(t.type)])
+}, P = ["disabled"];
+function w(e, t, n, s, l, a) {
+  return k(), S("button", {
+    onClick: t[0] || (t[0] = (...i) => e.handleClick && e.handleClick(...i)),
+    class: B([e.ns.b(), e.ns.m(e.type), e.round ? e.is.is("round") : "", e.isText ? e.is.is("text") : ""]),
+    disabled: e.disabled
   }, [
-    b("span", null, [
-      _(t.$slots, "default")
+    C("span", null, [
+      g(e.$slots, "default")
     ])
-  ], 2);
+  ], 10, P);
 }
-const N = /* @__PURE__ */ C(v, [["render", h]]), z = (t) => (t.install = (e) => {
-  e.component(t.name, t);
-}, t), w = z(N);
+const F = /* @__PURE__ */ T(E, [["render", w]]), I = (e) => (e.install = (t) => {
+  t.component(e.name, e);
+}, e), V = I(F);
 export {
-  w as SyButton
+  V as SyButton
 };
