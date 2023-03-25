@@ -1,9 +1,11 @@
 # saury ui
 
-## 预览地址
+## view address
 https://yingchanghong.github.io/saury/
 
-## 安装
+## Import
+```bash
 npm i @saury/components
 yarn add @saury/components
 pnpm i @saury/components
+```

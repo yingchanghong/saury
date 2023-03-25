@@ -47,3 +47,20 @@ Use `text` to `type` or `text` attributes as boolean
 </template>
 ```
 :::
+
+## disabled button
+
+Use `disabled` control button
+:::demo
+```vue
+<template>
+  <div fscw gap-2 >
+    <sy-button text disabled>Default</sy-button>
+    <sy-button type="primary" disabled>Primary</sy-button>
+    <sy-button type="success" disabled>Success</sy-button>
+    <sy-button type="warning" disabled>Warning</sy-button>
+    <sy-button type="info" disabled>Info</sy-button>
+  </div>
+</template>
+```
+:::

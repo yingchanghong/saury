@@ -1,0 +1,28 @@
+{
+  "name": "saury-ui",
+  "version": "1.0.0",
+  "description": "",
+  "exports": {
+    ".": {
+      "types": "./dist/saury-ui/index.d.ts",
+      "require": "./dist/saury-ui.umd.mjs",
+      "import": "./dist/saury-ui.mjs"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
+  "main": "./dist/saury-ui.umd.cjs",
+  "module": "./dist/saury-ui.mjs",
+  "types": "./dist/saury-ui/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@saury/components": "workspace:^1.0.0"
+  }
+}

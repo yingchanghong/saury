@@ -1,7 +1,13 @@
 <template>
   <button
     @click="handleClick"
-    :class="[ns.b(), ns.m(type), round ? is.is('round') : '', isText ? is.is('text') : '']"
+    :class="[
+      ns.b(),
+      ns.m(type),
+      round ? is.is('round') : '',
+      isText ? is.is('text') : '',
+      disabled ? is.is('disabled') : '',
+    ]"
     :disabled="disabled"
   >
     <span>

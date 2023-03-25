@@ -3,7 +3,7 @@
     ? n(exports, require('vue'))
     : typeof define == 'function' && define.amd
     ? define(['exports', 'vue'], n)
-    : ((d = typeof globalThis < 'u' ? globalThis : d || self), n((d['@saury/components'] = {}), d.Vue))
+    : ((d = typeof globalThis < 'u' ? globalThis : d || self), n((d['saury-ui'] = {}), d.Vue))
 })(this, function (d, n) {
   'use strict'
   const S = ['primary', 'success', 'warning', 'error', 'info', 'text', 'default'],
