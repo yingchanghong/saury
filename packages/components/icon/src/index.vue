@@ -10,7 +10,7 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
 import { isExternal as external } from '@saury/utils/validate'
-import '@saury/icon'
+// import '@saury/icon'
 import { iconProps } from './props'
 
 const props = defineProps(iconProps)
