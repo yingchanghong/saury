@@ -9,5 +9,6 @@ docs
 ssr-testing/cases/*
 docs/.vitepress/i18n/*
 docs/.vitepress/crowdin/*
+packages/saury-icon/*
 !docs/.vitepress/crowdin/en-US
 !.*
