@@ -1,1 +1,5 @@
 node_modules
+dist
+.cache
+docs/.vitepress/cache/
+docs/public/play

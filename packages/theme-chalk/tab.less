@@ -1,0 +1,25 @@
+/* stylelint-disable rule-empty-line-before */
+@import url('./var.less');
+.sy-tab {
+    position: relative;
+    display: flex;
+    float: left;
+    &-item {
+        padding: 8px 20px;
+        text-align: center;
+        &.active {
+            color: var(--sy-color-primary);
+        }
+        &:hover {
+            cursor: pointer;
+            color: var(--sy-color-primary);
+        }
+    }
+    &--line {
+        position: absolute;
+        bottom: 0;
+        height: 2px;
+        background: var(--sy-color-primary);
+        transition: all .25s;
+    }
+}

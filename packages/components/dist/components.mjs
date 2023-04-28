@@ -1,5 +1,5 @@
-import { defineComponent as k, computed as r, openBlock as u, createElementBlock as p, normalizeClass as B, createElementVNode as g, renderSlot as C, unref as d, normalizeStyle as x } from "vue";
-const E = ["primary", "success", "warning", "error", "info", "text", "default"], I = ["large", "small ", "default"], N = {
+import { defineComponent as g, computed as b, openBlock as u, createElementBlock as p, normalizeClass as _, createElementVNode as f, renderSlot as B, unref as y, normalizeStyle as h, ref as w, watch as V, nextTick as N, Fragment as T, renderList as E, toDisplayString as I } from "vue";
+const P = ["primary", "success", "warning", "error", "info", "text", "default"], z = ["large", "small ", "default"], F = {
   disabled: {
     type: Boolean,
     default: !1
@@ -17,7 +17,7 @@ const E = ["primary", "success", "warning", "error", "info", "text", "default"],
   type: {
     type: String,
     default: "default",
-    validator: (e) => E.includes(e)
+    validator: (e) => P.includes(e)
   },
   loading: {
     type: Boolean,
@@ -29,22 +29,22 @@ const E = ["primary", "success", "warning", "error", "info", "text", "default"],
   size: {
     type: String,
     default: "default",
-    validator: (e) => I.includes(e)
+    validator: (e) => z.includes(e)
   },
   text: {
     type: Boolean,
     default: !1
   }
-}, _ = "sy", z = "is-", b = (e, t, n, s, o) => {
+}, S = "sy", L = "is-", k = (e, t, n, s, o) => {
   let l = `${e}-${t}`;
   return n && (l += `-${n}`), s && (l += `__${s}`), o && (l += `--${o}`), l;
 }, $ = (e) => {
   const t = e;
   return {
-    b: (a = "") => b(_, t, a),
+    b: (a = "") => k(S, t, a),
     e: (a) => {
     },
-    m: (a) => a ? b(_, t, "", "", a) : "",
+    m: (a) => a ? k(S, t, "", "", a) : "",
     be: () => {
     },
     em: () => {
@@ -53,29 +53,29 @@ const E = ["primary", "success", "warning", "error", "info", "text", "default"],
     },
     bem: () => {
     },
-    is: (a, i = !0) => a && i ? `${z}${a}` : ""
+    is: (a, m = !0) => a && m ? `${L}${a}` : ""
   };
-}, P = k({
+}, q = g({
   name: "SyButton",
-  props: N,
+  props: F,
   setup(e) {
-    const { type: t, onClick: n, round: s, disabled: o, text: l } = e, c = $("btn"), f = $("round"), m = (i, h) => {
-      i(h);
-    }, y = r(() => t === "text" || l);
-    return { type: t, ns: c, handleClick: (i) => {
-      n && m(n, i);
-    }, is: f, round: s, disabled: o, isText: y };
+    const { type: t, onClick: n, round: s, disabled: o, text: l } = e, c = $("btn"), r = $("round"), i = (m, x) => {
+      m(x);
+    }, d = b(() => t === "text" || l);
+    return { type: t, ns: c, handleClick: (m) => {
+      n && i(n, m);
+    }, is: r, round: s, disabled: o, isText: d };
   }
-}), S = (e, t) => {
+}), C = (e, t) => {
   const n = e.__vccOpts || e;
   for (const [s, o] of t)
     n[s] = o;
   return n;
-}, T = ["disabled"];
-function w(e, t, n, s, o, l) {
+}, A = ["disabled"];
+function D(e, t, n, s, o, l) {
   return u(), p("button", {
     onClick: t[0] || (t[0] = (...c) => e.handleClick && e.handleClick(...c)),
-    class: B([
+    class: _([
       e.ns.b(),
       e.ns.m(e.type),
       e.round ? e.is.is("round") : "",
@@ -84,14 +84,14 @@ function w(e, t, n, s, o, l) {
     ]),
     disabled: e.disabled
   }, [
-    g("span", null, [
-      C(e.$slots, "default")
+    f("span", null, [
+      B(e.$slots, "default")
     ])
-  ], 10, T);
+  ], 10, A);
 }
-const F = /* @__PURE__ */ S(P, [["render", w]]), v = (e) => (e.install = (t) => {
+const O = /* @__PURE__ */ C(q, [["render", D]]), v = (e) => (e.install = (t) => {
   t.component(e.name, e);
-}, e), J = v(F), O = (e) => /^(https?:|mailto:|tel:)/.test(e), V = {
+}, e), ee = v(O), X = (e) => /^(https?:|mailto:|tel:)/.test(e), j = {
   icon: {
     type: String,
     default: ""
@@ -100,31 +100,74 @@ const F = /* @__PURE__ */ S(P, [["render", w]]), v = (e) => (e.install = (t) => 
     type: String,
     default: ""
   }
-}, j = {
+}, G = {
   key: 1,
   class: "svg-icon icon",
   "aria-hidden": "true"
-}, q = ["xlink-href"], A = {
+}, H = ["xlink-href"], J = {
   name: "SyIcon"
-}, D = /* @__PURE__ */ k({
-  ...A,
-  props: V,
+}, K = /* @__PURE__ */ g({
+  ...J,
+  props: j,
   setup(e) {
-    const t = e, n = r(() => O(t.icon)), s = r(() => ({
+    const t = e, n = b(() => X(t.icon)), s = b(() => ({
       mask: `url(${t.icon}) no-repeat 50% 50%`,
       "-webkit-mask": `url(${t.icon}) no-repeat 50% 50%`
-    })), o = r(() => `#icon-${t.icon}`);
-    return (l, c) => d(n) ? (u(), p("div", {
+    })), o = b(() => `#icon-${t.icon}`);
+    return (l, c) => y(n) ? (u(), p("div", {
       key: 0,
       class: "icon svg-icon svg-external-icon",
-      style: x(d(s))
-    }, null, 4)) : (u(), p("svg", j, [
-      g("use", { "xlink-href": d(o) }, null, 8, q)
+      style: h(y(s))
+    }, null, 4)) : (u(), p("svg", G, [
+      f("use", { "xlink-href": y(o) }, null, 8, H)
     ]));
   }
 });
-const G = /* @__PURE__ */ S(D, [["__scopeId", "data-v-e3ac4067"]]), K = v(G);
+const M = /* @__PURE__ */ C(K, [["__scopeId", "data-v-e3ac4067"]]), te = v(M), Q = {
+  modelValue: String,
+  list: {
+    type: Array,
+    default: () => []
+  }
+}, R = { class: "sy-tab-bar" }, U = ["onClick"], W = {
+  name: "SyTab"
+}, Y = /* @__PURE__ */ g({
+  ...W,
+  props: Q,
+  emits: ["update:modelValue", "change"],
+  setup(e, { emit: t }) {
+    const n = e, s = $("tab"), o = (c) => {
+      t("update:modelValue", c);
+    }, l = w({});
+    return V(() => n.modelValue, (c) => {
+      N(() => {
+        const r = document.querySelector(".active"), i = window.getComputedStyle(r), d = i.getPropertyValue("width"), a = i.getPropertyValue("padding-left");
+        l.value = {
+          transform: `translateX(${r.offsetLeft + Number(a.replace("px", ""))}px)`,
+          width: `${d}`
+        };
+      });
+    }), (c, r) => (u(), p("div", R, [
+      f("div", {
+        class: _([y(s).b()])
+      }, [
+        (u(!0), p(T, null, E(c.list, (i, d) => (u(), p("div", {
+          class: _([y(s).b("item"), i.value === c.modelValue ? "active" : ""]),
+          key: d,
+          onClick: (a) => o(i.value)
+        }, [
+          f("span", null, I(i.label), 1)
+        ], 10, U))), 128)),
+        f("div", {
+          class: "sy-tab--line",
+          style: h(l.value)
+        }, null, 4)
+      ], 2)
+    ]));
+  }
+}), ne = v(Y);
 export {
-  J as SyButton,
-  K as SyIcon
+  ee as SyButton,
+  te as SyIcon,
+  ne as SyTab
 };
