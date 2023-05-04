@@ -10,7 +10,7 @@ importers:
       '@saury/saury-eslint-config': workspace:^1.0.0
       '@saury/saury-stylelint-config': workspace:^1.0.0
       '@saury/theme-chalk': workspace:^1.0.0
-      '@saury/utils': workspace:^1.0.0
+      '@saury/utils': workspace:^1.0.1
       '@typescript-eslint/eslint-plugin': 5.38.0
       '@typescript-eslint/parser': 5.38.0
       eslint: ^8.23.1
@@ -95,6 +95,9 @@ importers:
       eslint-config-prettier: 6.15.0
       eslint-plugin-import: 2.27.5_sz4i7qznf44sliit4yqchbvfk4
       eslint-plugin-vue: 9.9.0
+
+  packages/saury-icon:
+    specifiers: {}
 
   packages/saury-stylelint-config:
     specifiers:

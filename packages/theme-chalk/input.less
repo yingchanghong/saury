@@ -1,0 +1,62 @@
+/* stylelint-disable no-duplicate-selectors */
+@import url('./var.less');
+
+.sy-input {
+  display: flex;
+  color: inherit;
+  line-height: var(--sy-input-height);
+
+  &-wrap {
+    flex-grow: 1;
+    display: inline-flex;
+    padding: 1px 11px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+
+    &.is-focus {
+      --sy-input-border: var(--sy-color-primary);
+
+      border: 1px solid var(--sy-input-border);
+    }
+  }
+
+  &-inner {
+    width: 100%;
+    flex-grow: 1;
+    line-height: calc(var(--sy-input-height) - 2px);
+    /* stylelint-disable-next-line property-no-vendor-prefix */
+    -webkit-appearance: none;
+    border: none;
+    outline: none;
+    caret-color: var(--sy-caret-color);
+
+    &[disabled] {
+      cursor: not-allowed;
+    }
+  }
+
+  & {
+    --sy-input-height: var(--sy-height-base);
+    --sy-input-disabled-bg-color: var(--sy-disabled-bg-color);
+    --sy-input-border: var(--sy-border-color-hover);
+  }
+
+  &.is-disabled {
+    cursor: not-allowed;
+
+    & {
+      --sy-input-height: var(--sy-height-base);
+      --sy-input-disabled-bg-color: var(--sy-disabled-bg-color);
+    }
+
+    .sy-input-wrap {
+      background: var(--sy-input-disabled-bg-color);
+    }
+  }
+
+  &-clear {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

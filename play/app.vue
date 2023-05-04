@@ -5,6 +5,8 @@
   <sy-icon :icon="fileName" />
   <svg-icon :icon-class="fileName" />
   <sy-tab :list="tabs" v-model="tab">sdsd</sy-tab>
+  <sy-input v-model="fileName" placeholder="请输入" disabled></sy-input>
+  <sy-input v-model="fileName" placeholder="请输入" clearble></sy-input>
 </template>
 <script setup>
 import { ref } from 'vue'
