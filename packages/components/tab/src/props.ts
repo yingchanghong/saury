@@ -1,8 +1,8 @@
-import type { ExtractPropTypes } from 'vue'
+import type { ExtractPropTypes, PropType } from 'vue'
 
 type ListItem = {
-    label: string;
-    value: string;
+  label: string
+  value: string
 }
 export const tabProps = {
   modelValue: String,

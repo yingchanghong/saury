@@ -138,15 +138,18 @@ const U = /* @__PURE__ */ B(R, [["__scopeId", "data-v-e3ac4067"]]), ie = h(U), W
     const o = e, l = g("tab"), n = (s) => {
       t("update:modelValue", s);
     }, c = C({});
-    return P(() => o.modelValue, () => {
-      w(() => {
-        const s = document.querySelector(".active"), f = window.getComputedStyle(s), u = f.getPropertyValue("width"), a = f.getPropertyValue("padding-left");
-        c.value = {
-          transform: `translateX(${s.offsetLeft + Number(a.replace("px", ""))}px)`,
-          width: u
-        };
-      });
-    }), (s, f) => (d(), p("div", Y, [
+    return P(
+      () => o.modelValue,
+      () => {
+        w(() => {
+          const s = document.querySelector(".active"), f = window.getComputedStyle(s), u = f.getPropertyValue("width"), a = f.getPropertyValue("padding-left");
+          c.value = {
+            transform: `translateX(${s.offsetLeft + Number(a.replace("px", ""))}px)`,
+            width: u
+          };
+        });
+      }
+    ), (s, f) => (d(), p("div", Y, [
       m("div", {
         class: y([i(l).b()])
       }, [
@@ -174,11 +177,7 @@ const U = /* @__PURE__ */ B(R, [["__scopeId", "data-v-e3ac4067"]]), ie = h(U), W
     default: "text"
   },
   modelValue: {
-    type: ne([
-      String,
-      Number,
-      Object
-    ]),
+    type: ne([String, Number, Object]),
     default: ""
   },
   disabled: {
