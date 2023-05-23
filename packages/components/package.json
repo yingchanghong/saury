@@ -4,7 +4,7 @@
   "description": "",
   "exports": {
     ".": {
-      "types": "./dist/components/index.d.ts",
+      "types": "./dist/index.d.ts",
       "require": "./dist/components.umd.js",
       "import": "./dist/components.mjs"
     },
@@ -12,7 +12,7 @@
   },
   "main": "./dist/components.umd.cjs",
   "module": "./dist/components.js",
-  "types": "./dist/components/index.d.ts",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
