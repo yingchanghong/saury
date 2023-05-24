@@ -12,6 +12,7 @@
     "format": "prettier --write \"./**/*.{html,vue,ts,js,json,md}\"",
     "dev": "pnpm -C play dev",
     "docs:build": "npm -C docs run build",
+    "components:build": "pnpm -C packages/components run build",
     "stub": "pnpm -r --parallel --filter=./packages/* run stub",
     "volar:helper": "tsx scripts/volar-helper"
   },
